@@ -17,7 +17,7 @@ public class casestudy1 {
             } else if (menu == 3) {
                 analyzeAchievementByType(sc, achievements, count);
             } else if (menu == 4) {
-                System.out.println("Exiting~");
+                System.out.println("Program finished. Thank you!");
                 break;
             } else {
                 System.out.println("Invalid menu number! Please try again.");
@@ -52,7 +52,6 @@ public class casestudy1 {
         achievements[count][3] = sc.nextLine();
         System.out.print("Enter Year Achievement (2010-2024): ");
         achievements[count][4] = String.valueOf(sc.nextInt());
-
         System.out.println("Achievement added successfully!");
         System.out.println();
     }
@@ -76,22 +75,22 @@ public class casestudy1 {
 
     public static void analyzeAchievementByType(Scanner sc, String[][] achievements, int count) {
         sc.nextLine();
-        System.out.print("Enter Achievement Type to analyze (e.g., 'Academic', 'Sports', etc.): ");
+        System.out.print("Enter Achievement Type to analyze): ");
         String typeToAnalyze = sc.nextLine();
-        System.out.println("=== ANALYSIS OF ACHIEVEMENTS OF TYPE: " + typeToAnalyze + " ===");
         System.out.println();
+        System.out.println("=== ANALYSIS OF ACHIEVEMENTS OF TYPE: " + typeToAnalyze + " ===");
 
         boolean found = false;
         for (int i = 0; i < count; i++) {
             if (achievements[i][2].equalsIgnoreCase(typeToAnalyze)) {
-                System.out.println("Name: " + achievements[i][0]);
-                System.out.println("NIM: " + achievements[i][1]);
-                System.out.println("Achievement Type: " + achievements[i][2]);
-                System.out.println("Level: " + achievements[i][3]);
-                System.out.println("Year: " + achievements[i][4]);
+                System.out.print("Name: " + achievements[i][0]);
+                System.out.print(" | NIM: " + achievements[i][1]);
+                System.out.print(" | Level: " + achievements[i][3]);
+                System.out.print(" | Year: " + achievements[i][4]);
                 System.out.println();
                 found = true;
             }
+            System.out.println();
         }
 
         if (!found) {
