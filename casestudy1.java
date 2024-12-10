@@ -26,10 +26,10 @@ public class casestudy1 {
     }
 
     public static void showMenu() {
-        System.out.println("=== PENCATATAN PRESTASI MAHASISWA ===");
-        System.out.println("Menu 1: Tambah data prestasi");
-        System.out.println("Menu 2: Tampilkan semua prestasi");
-        System.out.println("Menu 3: Analisis prestasi berdasarkan jenis");
+        System.out.println("=== RECORDING STUDENT ACHIEVEMENTS ===");
+        System.out.println("Menu 1: Add Achievement Data");
+        System.out.println("Menu 2: Show All Achievements");
+        System.out.println("Menu 3: Analyze achievements by Type");
         System.out.println("Menu 4: Exit");
         System.out.println();
         System.out.print("Input the menu numbers (1-4): ");
