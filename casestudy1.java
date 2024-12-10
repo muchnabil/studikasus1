@@ -1,30 +1,6 @@
 import java.util.Scanner;
 
 public class casestudy1 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String[][] achievements = new String[21][5];
-        int count = 0;
-        while (true) {
-            showMenu();
-            int menu = sc.nextInt();
-
-            if (menu == 1) {
-                addAchievement(sc, achievements, count);
-                count++;
-            } else if (menu == 2) {
-                displayAllAchievements(achievements, count);
-            } else if (menu == 3) {
-                analyzeAchievementByType(sc, achievements, count);
-            } else if (menu == 4) {
-                System.out.println("Program finished. Thank you!");
-                break;
-            } else {
-                System.out.println("Invalid menu number! Please try again.");
-            }
-        }
-    }
-    
     public static void showMenu() {
         System.out.println("=== RECORDING STUDENT ACHIEVEMENTS ===");
         System.out.println("Menu 1: Add Achievement Data");
@@ -95,6 +71,30 @@ public class casestudy1 {
 
         if (!found) {
             System.out.println("No achievements found for this type.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[][] achievements = new String[21][5];
+        int count = 0;
+        while (true) {
+            showMenu();
+            int menu = sc.nextInt();
+
+            if (menu == 1) {
+                addAchievement(sc, achievements, count);
+                count++;
+            } else if (menu == 2) {
+                displayAllAchievements(achievements, count);
+            } else if (menu == 3) {
+                analyzeAchievementByType(sc, achievements, count);
+            } else if (menu == 4) {
+                System.out.println("Program finished. Thank you!");
+                break;
+            } else {
+                System.out.println("Invalid menu number! Please try again.");
+            }
         }
     }
 }
