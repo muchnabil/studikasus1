@@ -48,20 +48,6 @@ public class casestudy1 {
         sc.nextLine();
         System.out.print("Enter Achievement Type: ");
         achievements[count][2] = sc.nextLine();
-        switch (achievements[count][3]) {
-            case "1":
-                System.out.println("local");
-                break;
-            case "2":
-                System.out.println("National");
-                break;
-            case "3":
-                System.out.println("International");
-                break;
-            default:
-                System.out.println("Enter a valid type");
-                break;
-        }
         System.out.print("Enter Level Achievement (Local/National/International): ");
         achievements[count][3] = sc.nextLine();
         System.out.print("Enter Year Achievement (2010-2024): ");
