@@ -24,7 +24,7 @@ public class casestudy1 {
             }
         }
     }
-
+    
     public static void showMenu() {
         System.out.println("=== RECORDING STUDENT ACHIEVEMENTS ===");
         System.out.println("Menu 1: Add Achievement Data");
