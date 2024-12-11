@@ -64,22 +64,21 @@ public class casestudy1 {
         sc.nextLine();
         System.out.print("Enter Achievement Type to analyze): ");
         String typeToAnalyze = sc.nextLine();
-        System.out.println();
-        System.out.println("=== ANALYSIS OF ACHIEVEMENTS OF TYPE: " + typeToAnalyze + " ===");
-
         boolean found = false;
         for (int i = 0; i < count; i++) {
+            System.out.println("=== ANALYSIS OF ACHIEVEMENTS OF TYPE: " + typeToAnalyze + " ===");
             if (achievements[i][2].equalsIgnoreCase(typeToAnalyze)) {
                 System.out.print("Name: " + achievements[i][0]);
                 System.out.print(" | NIM: " + achievements[i][1]);
                 System.out.print(" | Level: " + achievements[i][3]);
                 System.out.print(" | Year: " + achievements[i][4]);
-                System.out.println();
                 found = true;
             }
-            else {
-                System.out.println("No achievements found for this type.");
-            }
+            System.out.println();
+            System.out.println();
+        }
+        if(!found) {
+            System.out.println("No achievements found for this type.");
             System.out.println();
         }
     }
