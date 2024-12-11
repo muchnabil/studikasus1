@@ -45,9 +45,7 @@ public class casestudy1 {
 
     public static void displayAllAchievements(String[][] achievements, int count) {
         System.out.println("=== ALL STUDENT'S ACHIEVEMENTS ===");
-        if (count == 0) {
-            System.out.println("No achievements available.");
-        } else {
+        if (count != 0) {
             for (int i = 0; i < count; i++) {
                 System.out.print("Name: " + achievements[i][0]);
                 System.out.print(" | Student ID Number: " + achievements[i][1]);
@@ -56,6 +54,8 @@ public class casestudy1 {
                 System.out.print(" | Year: " + achievements[i][4]);
                 System.out.println();
             }
+        } else {
+            System.out.println("No achievements available.");
         }
         System.out.println();
     }
