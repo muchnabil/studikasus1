@@ -26,8 +26,19 @@ public class casestudy1 {
         achievements[count][2] = sc.nextLine();
         System.out.print("Enter Level Achievement (Local/National/International): ");
         achievements[count][3] = sc.nextLine();
-        System.out.print("Enter Year Achievement (2010-2024): ");
-        achievements[count][4] = String.valueOf(sc.nextInt());
+
+        int year = 0;
+        while (true) {
+            System.out.print("Enter Year Achievement (2010-2024): ");
+            year = sc.nextInt();
+            if (year >= 2010 && year <= 2024) {
+                achievements[count][4] = String.valueOf(year);
+                break;
+            } else {
+                System.out.println("Year is not valid. Please try again!.");
+            }
+        }
+        
         System.out.println("Achievement added successfully!");
         System.out.println();
     }
