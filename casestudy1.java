@@ -64,9 +64,10 @@ public class casestudy1 {
         sc.nextLine();
         System.out.print("Enter Achievement Type to analyze): ");
         String typeToAnalyze = sc.nextLine();
+        System.out.println("=== ANALYSIS OF ACHIEVEMENTS OF TYPE: " + typeToAnalyze + " ===");
+        
         boolean found = false;
         for (int i = 0; i < count; i++) {
-            System.out.println("=== ANALYSIS OF ACHIEVEMENTS OF TYPE: " + typeToAnalyze + " ===");
             if (achievements[i][2].equalsIgnoreCase(typeToAnalyze)) {
                 System.out.print("Name: " + achievements[i][0]);
                 System.out.print(" | NIM: " + achievements[i][1]);
