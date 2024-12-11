@@ -35,7 +35,7 @@ public class casestudy1 {
                 achievements[count][4] = String.valueOf(year);
                 break;
             } else {
-                System.out.println("Year is not valid. Please try again!.");
+                System.out.println("Year is not valid. Please try again.");
             }
         }
         
@@ -45,7 +45,9 @@ public class casestudy1 {
 
     public static void displayAllAchievements(String[][] achievements, int count) {
         System.out.println("=== ALL STUDENT'S ACHIEVEMENTS ===");
-        if (count != 0) {
+        if (count == 0) {
+            System.out.println("No achievements available.");
+        } else {
             for (int i = 0; i < count; i++) {
                 System.out.print("Name: " + achievements[i][0]);
                 System.out.print(" | Student ID Number: " + achievements[i][1]);
@@ -54,8 +56,6 @@ public class casestudy1 {
                 System.out.print(" | Year: " + achievements[i][4]);
                 System.out.println();
             }
-        } else {
-            System.out.println("No achievements available.");
         }
         System.out.println();
     }
@@ -77,11 +77,10 @@ public class casestudy1 {
                 System.out.println();
                 found = true;
             }
+            else {
+                System.out.println("No achievements found for this type.");
+            }
             System.out.println();
-        }
-
-        if (!found) {
-            System.out.println("No achievements found for this type.");
         }
     }
 
